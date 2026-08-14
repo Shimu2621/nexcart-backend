@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import catchAsync from "../../utils/catchAsync";
 import { DashboardServices } from "./dashboard.services";
 
+// Get analytics
 const getAnalytics = catchAsync(async (req: Request, res: Response) => {
   const result = await DashboardServices.getAnalytics();
   res.status(200).json({
